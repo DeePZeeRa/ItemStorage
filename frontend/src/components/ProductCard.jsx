@@ -27,7 +27,6 @@ import { FaInfo } from "react-icons/fa6";
 // import DeleteIcon from '@chakra-ui/react'
 
 export default function ProductCard({_id,name,price,image,info}) {
-    const textColor = useColorModeValue("black","gray.200");
     const bg = useColorModeValue("gray.300","black")
     const {deleteProduct} = useProductStore(); 
     const toast = useToast();

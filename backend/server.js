@@ -21,25 +21,25 @@ const __dirname = path.resolve();
 
 app.use(express.json()); // allow us to parse JSON data in incoming requests i.e req.body
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "/frontend/dist")));
-  }
-  
-  // API routes
-  app.use("/api/products", router);
-  
-  // Serve frontend for all other routes
-  if (process.env.NODE_ENV === "production") {
-    app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-    });
-  }
+
 
 
 
 
 
 app.use("/api/products",router);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+  });
+}
+
+// API routes
+app.use("/api/products", router);
+
+
 
 app.listen(PORT,()=>{
     connectDB();
