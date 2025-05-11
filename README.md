@@ -1,12 +1,31 @@
-Live demo: https://itemstorage.onrender.com/
-
-Tech Used: - MERN
+live demo --> https://itemstorage.onrender.com/
 
 
-Styling Used:- chakra UI
+# ItemStorage
 
-compatible with Mobile screen
+A high-performance full stack product management application that allows users to create, view, and delete products. Built with React, Chakra UI, Zustand, Node.js, Express, and MongoDB.
 
+## Features
+
+- Add, view, and delete products with real-time UI updates
+- Responsive and accessible UI using Chakra UI
+- Fast state management with Zustand
+- RESTful API with robust error handling and validation
+- Scalable backend with Express and MongoDB (Mongoose)
+- Modular, maintainable codebase
+
+## Tech Stack
+
+- **Frontend:** React, Chakra UI, Zustand, Vite, React Router
+- **Backend:** Node.js, Express.js, MongoDB, Mongoose
+- **Other:** JavaScript, Axios, ESLint
+
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+- MongoDB instance (local or cloud)
 
 How to start in local system?
 --> go to backend directory (cd backend), run command --> nodemon server.js (before that, install nodemon for automatic server restart)
